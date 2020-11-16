@@ -11,6 +11,8 @@ echo "hello world";
 echo "<pre>";
 
 $db = parse_url(getenv("DATABASE_URL"));
+$conn=NULL;
+
 try{
 	extract($db);
 	$dbname=ltrim($path);
@@ -20,4 +22,5 @@ try{
 }catch (Exception $e){
 	 echo $e;
 }
+echo "connected to database";
 echo "</pre>";
