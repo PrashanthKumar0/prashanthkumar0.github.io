@@ -135,5 +135,9 @@ function initUI(){
     setupImgViewer();
 }
 
-
+window.onclick=function(){
+	navbar.classList.remove('open');
+    $('.nav-bar .nav-zip-slider').style='right:-25px;';
+  
+}
 
