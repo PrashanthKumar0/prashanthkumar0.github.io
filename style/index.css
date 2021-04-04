@@ -1,0 +1,173 @@
+/* 
+    FONTS USED:
+        ../assets/fonts/Montserrat-Regular.ttf
+        
+*/
+
+/* fonts & main elements */
+
+
+
+
+
+
+
+
+body{
+    
+    color:var(--text-primary);
+    background:var(--color-primary);
+    font-family: 'Monsterrat';
+    margin:0px;
+    /* margin-top:var(--navBar-height); */
+}
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    transition:0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) all;
+}
+
+/* classes */
+
+
+/* commons */
+.flex-wrap,.flex,.flex-v{
+    display: flex;
+}
+
+
+.flex-v{
+    flex-direction: column;   
+}
+
+
+.flex-wrap{
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.no-select{
+    user-select: none;
+}
+
+
+.headding-stylish{
+    font-family: 'Raleway';
+    text-align: center;
+    position: relative;
+    margin-bottom:50px;
+}
+.headding-stylish:before,
+.headding-stylish:after{
+    content:'';
+    position: absolute;
+    bottom:-20px;
+    left:50%;
+    border-radius:4px;
+}
+.headding-stylish:before{
+    width:80%;
+    max-width:500px;
+    height:4px;
+    background: linear-gradient(to top right,var(--color-primary-theme),var(--color-secondary-theme));
+    transform:translate(-50%,-50%);
+}
+.headding-stylish:after{
+    width:5px;
+    height:5px;
+    transform:rotate(45deg) translate(-50%,100%);
+    background: linear-gradient(to top right,var(--color-primary-theme),var(--color-secondary-theme));
+    border:10px double var(--text-primary);
+}
+
+
+
+.link{
+    display: inline-block;
+    color:var(--text-link);
+    text-decoration: none;
+    padding:4px 16px;
+    /* border:2px solid var(--text-primary); */
+    background: var(--color-primary);
+    box-shadow:0px 0px 10px 4px var(--color-secondary),inset 0px 0px 10px 4px var(--color-secondary);
+    border-radius:10px;
+    margin:10px;
+}
+
+
+
+
+
+.full-screen{
+    padding-top:var(--navBar-height);
+    min-height: 100vh;
+    background: var(--color-primary);
+    
+    z-index:2;
+}
+
+/* buttons */
+
+.button-outline,
+.button{
+    font-weight: bold;
+    padding:5px 15px;
+    border-radius:20px;
+    color:var(--color-primary-theme);
+}
+.button-outline{
+    border:2px solid var(--color-primary-theme);
+    background: transparent;
+}
+
+
+
+
+
+
+
+/* images */
+
+.img-filter-dull{
+    filter:brightness(60%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsiveness  */
+
+img{
+    max-width: 100%;
+}
+
+.contact-btn{
+    opacity: 0;
+}
+
+@media only screen and (min-width:530px){
+    .contact-btn{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+

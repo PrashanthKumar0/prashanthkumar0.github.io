@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="theme-color" content='#121212'>
+    <meta name="manifest" content="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLES -->
+
+    <!-- <link rel="stylesheet" href="assets/font awesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/font awesome/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="assets/bootstrap-icons-1.4.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/devicon/devicon.min.css">
+
+
+
+
+
+    <link rel="stylesheet" href="style/loader.css">
+    
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/colors.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/uis.css">
+
+    <link rel="stylesheet" href="style/components/navBar.css">
+    <link rel="stylesheet" href="style/components/profile.css">
+
+
+    <link rel="stylesheet" href="style/components/footer.css">
+
+
+
+
+
+
+    <!-- /STYLES -->
+
+
+
+
+    <title>Prashanth Kumar's Profile</title>
+
+
+</head>
+
+<body>
+
+    <div id="loader">
+        <div id="loaderAnim">
+            <div></div>
+        </div>
+        <h1 style='margin-top:auto;'>Loading...</h1>
+    </div>
+
+
+    <div id='body-wrapper'>
+
+        <!--! NAV BAR -->
+        <nav class='nav-bar flex no-select'>
+
+            <span class='theme-toggle bi-moon-stars-fill' style='font-size:1.5rem;' onclick='toggleTheme();'></span>
+
+            <a class='contact-btn link button-outline' href='#reachMe' style='margin-left:auto;'>contact</a>
+
+            <span class='ham-menu flex-v' style='margin-left:35px;' onclick='toggleNavDrawer()'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </span>
+
+            <div class="nav-zip-slider"></div>
+
+            <div class="nav-drawer">
+                <img src="./assets/images/navBanner.jpg" class='img-filter-dull' alt='nav items'>
+                <a href="#about" class="drawer-item active">About Me</a>
+                <a href="#mySkill" class="drawer-item">My Skills</a>
+                <a href="#myWorks" class="drawer-item">My Works</a>
+                <a href="#reachMe" class="drawer-item">Reach Me</a>
+
+            </div>
+        </nav>
+        <!--! /NAV BAR -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--! main sections  -->
+        <!--! about -->
+        <main id="about" class='full-screen flex-v'>
+            <!-- needs profile.css -->
+
+            <canvas id='cnvs' class='bg'></canvas>
+
+
+            <div class="profile flex-v">
+                <div class="avatar">
+                    <img src="./assets/images/avatar.jpg" alt="" srcset="">
+                </div>
+
+                <div id="typeWriter">
+                    <!-- <i class="bi-cpu-fill"></i> -->
+                    <!-- <i class="bi-gear-wide-connected"></i> -->
+                    <!-- <i class="bi-terminal"></i> -->
+                    <b>&gt;_</b>
+                    Hi I am <span data-cur-index='0'
+                        data-replace='Prashanth Kumar,A Programmer,A Curious guy,A Web Developer'> Prashanth
+                        Kumar</span>
+                </div>
+
+                <div class="scrollIndicator">
+                    <div class="bi-chevron-double-up" style='font-size:xx-large'></div>
+                </div>
+            </div>
+        </main>
+
+        <!--! mySkills -->
+        <main id="mySkill" class='full-screen'>
+            <h1 class="headding-stylish">My Skills</h1>
+
+            
+            <div class="card">
+                I can built any kind of website on demand with stunning ui and amazing functionality within a very
+                low budget .
+            </div>
+
+
+            <div class='flex-wrap'>
+
+                
+
+
+                
+                
+                <div class="card-small">
+                    <i class="devicon-html5-plain"></i>
+                    <h1>HTML 5</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-css3-plain"></i>
+                    <h1>CSS 3</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-javascript-plain"></i>
+                    <h1>Vanilla Javascript</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-php-plain"></i>
+                    <h1>PHP</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-mysql-plain"></i>
+                    <h1>MYSQL</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <h1>c++</h1>
+                </div>
+
+                <!--!to add later cuz i am not so fluent in it  -->
+                
+                <!--                 
+                <div class="card-small">
+                    <i class="devicon-heroku-plain"></i>
+                    <h1>heroku</h1>
+                </div>
+                <div class="card-small">
+                    <i class="devicon-postgresql-plain"></i>
+                    <h1>postgre sql</h1>
+                </div>
+
+                <div class="card-small">
+                    <i class="devicon-debian-plain"></i>
+                    <h1>debian systems</h1>
+                </div> 
+                -->
+
+            </div>
+
+
+
+        </main>
+
+
+
+
+
+        <!--! myWorks -->
+        <main id="myWorks" class='full-screen'>
+            <h1 class="headding-stylish">My Works</h1>
+            
+            
+            <div class="card">
+                Click on images to see a zoomed preview.
+            </div>
+
+
+            
+            <!-- ! holiday jollyday -->
+            <div class="card center">
+                <div class="title">
+                    Holiday Jollyday Site
+                </div>
+                
+                <p class='content'>
+                    This is my first realworld site that i made.
+                    This uses a free hosting on 000webhost's sub domain so it could be down for sometimes.
+                    Its for a travel agency named "Holiday Jollyday".
+                    This site has following functionalities.
+                    
+                    <ul>
+                        <li>Contact Form</li>
+                        <li>Live Email Notification on bookings</li>
+                        <li>Interactive Admin pannel for managing content of website like</li>
+                        <li>Interactive Dashboard to monitor bookings</li>
+                    </ul>
+                    
+                </p>
+                
+                <a href="https://holidayjollyday.000webhostapp.com" class='link'> See It Live <i class="bi-hand-index-thumb-fill "></i> </a>
+
+                <div class="flex-wrap img-showcase">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (1).png" alt="holiday jollyday site main page">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (2).png" alt="holiday jollyday site main page portrait">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (3).png" alt="holiday jollyday site screen shot">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (4).png" alt="holiday jollyday site screen shot">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (5).png" alt="holiday jollyday site image gallery">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (6).png" alt="holiday jollyday site image gallery preview">
+                    
+                    <div style="width:100%;opacity:0.5;margin-top:30px;margin-bottom:30px">Admin Pannel</div>
+
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (7).png" alt="holiday jollyday site admin pannel dashboard">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (8).png" alt="holiday jollyday site admin pannel image upload">
+                    <img src="./assets/images/projects/holiday jollyday/Screen Shot (9).png" alt="holiday jollyday site admin pannel packages editor">
+                </div>
+
+                <div id="imgPreview" class='flex'>
+                    <button onclick='closeImageView();'> <i class='bi-x'></i></button>
+                    <img src="" id="imagePreviewImg" alt="image preview unable to load">
+                    <div  id="imgPreviewCaption">(no caption)</div>
+                </div>
+            </div>
+
+
+            <!-- ! meteor-chat-app -->
+            <div class="card center">
+                <div class="title">
+                    Meteor Chat Web App
+                </div>
+                
+                <p class='content'>
+                    This Meteor Chat App was made just for fun to play with php's server sent events .
+                    This is a room based chat app hosted on 'heroku' with free dyno so it could be down sometimes.
+                    The screenshot and link to a live app is provided below.
+                </p>
+                
+                <a href="https://meteor-chat-app0.herokuapp.com" class='link'> See It Live <i class="bi-hand-index-thumb-fill "></i> </a>
+
+                <div class="flex-wrap img-showcase">
+                    <img src="./assets/images/projects/meteor chat app/Screenshot_2021-02-07_155639.jpg" alt="meteor app screen shot">
+                    <img src="./assets/images/projects/meteor chat app/Screenshot_2021-02-07_155647.jpg" alt="meteor app screen shot">
+                    <img src="./assets/images/projects/meteor chat app/Screenshot_2021-02-07_155618.jpg" alt="meteor app chat page">
+                    <img src="./assets/images/projects/meteor chat app/Screenshot_2021-02-07_155631.jpg" alt="meteor app screen shot">
+                </div>
+
+            </div>
+
+
+            <!-- ! git link-->
+            
+            <div class="card center">
+                I have also made some little fun projects which i couldnt display here as it will become a mess.
+                Some of them could be found on my github account
+                <a href="https://github.com/PrashanthKumar0" class='link'> Tap Here To See Them <i class="bi-github"></i> </a>
+                <br><br>
+                If you want to know more about me you can see it Here
+                <a href="https://sololearn.com/Profile/3573369" class='link' style='color:salmon;'> Tap Here To See My Sololearn Account <img src="./assets/images/sololearn-1.svg" alt="" style='width:20px;'> </a>
+                
+            </div>
+        </main>
+
+        <!--! reachMe -->
+        <main id="reachMe" class='full-screen'>
+            <h1 class="headding-stylish">Reach Me</h1>
+            <div class="footer flex-v">
+
+                <div class="social">
+                    <a href="https://wm.me/+918667856746?text=Hi%20Prashanth%20I%20need%20a%20website%20%uD83D%uDE0A" class="bi-whatsapp" style='color:rgb(0, 255, 64)'></a>
+                    <a href="https://youtube.com/channel/UCatVOA4rVil_6X8pjntUSPA" class="bi-youtube" style='color:rgb(255, 67, 67)'></a>
+                    <a href="https://twitter.com/pk_coder" class="bi-twitter" style='color:rgb(67, 133, 255)'></a>
+                    <a href="mailto:prashanthgiri786@gmail.com" class="bi-envelope-fill" style='color:rgb(255, 36, 36)'></a>
+                    <a href="https://github.com/PrashanthKumar0" class="bi-github"></a>
+                    <a href='tel:+919786081254' class="bi-telephone-forward-fill" style='color:rgb(43, 189, 226)'></a>
+                </div>
+
+                <div class='address'>
+                    <!-- On Home ;) -->
+                    <!-- <i class="bi-cursor-fill" style='font-size:xx-large;'></i>  -->
+                    <i class="bi-geo-alt-fill" style='font-size:xx-large;'></i>
+                    <br>
+                    Tiruppur, Tamilnadu <b style='color:var(--color-primary-theme)'>.</b> <br>
+                </div>
+
+                <div style='margin:auto;opacity:0.6;'>
+                    &copy; By Prashanth Kumar 2021<span id="year"></span>
+                </div>
+
+                <script>
+                    var _yr = new Date().getFullYear();
+                    document.getElementById('year').innerText = _yr == 2021 ? '' : ' - ' + _yr;
+                </script>
+            </div>
+        </main>
+
+
+    </div>
+
+
+    
+    <!-- for theming  used by style.js-->
+
+    <style id="themeStyleSheet"></style>
+
+    <script src="script/style.js"></script>
+
+    <script src="script/canvasBg.js"></script>
+
+
+</body>
+
+</html>

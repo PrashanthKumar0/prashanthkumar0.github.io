@@ -1,0 +1,20 @@
+
+
+/* for profile.css */
+@font-face{
+    font-family: '8bitOperator';
+    src: url('../../assets/fonts/8bitOperatorPlusSC-Bold.ttf');
+}
+
+/* for index.css */
+@font-face{
+    font-family: 'Monsterrat';
+    src:url('../assets/fonts/Montserrat-Regular.ttf')
+}
+
+/*  */
+@font-face{
+    font-family: 'Raleway';
+    src:url('../assets/fonts/Raleway-Regular.ttf')
+}
+

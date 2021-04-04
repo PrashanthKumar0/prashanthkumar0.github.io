@@ -1,0 +1,27 @@
+.footer{
+    flex-wrap: wrap;
+}
+
+
+.footer .social{ 
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    padding:10px;
+    margin-bottom:40px;
+}
+
+.footer .address{
+    line-height:  30px;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.footer .social a{
+    font-size:xx-large;
+    margin:15px;
+    text-decoration: none;
+    color:var(--text-primary);
+}

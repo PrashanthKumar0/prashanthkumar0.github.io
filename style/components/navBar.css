@@ -1,0 +1,201 @@
+:root{
+    --navBar-height:60px;
+}
+.nav-bar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:var(--navBar-height);
+    background: var(--color-secondary);
+    box-shadow:0px 0px 10px  var(--color-secondary);
+    padding:0px 25px;
+    align-items: center;
+    z-index: 10;
+}
+
+.ham-menu{
+    /* border:2px solid var(--color-primary); */
+    /* background: #FFF; */
+    cursor: pointer;
+    width:30px;
+    height:25px;
+    position: relative;
+}
+
+
+.ham-menu > div{
+    margin:auto;
+    width:100%;
+    height:4px;
+    border-radius:0px 20px;
+    background: var(--text-primary);
+}
+
+.nav-bar.open .ham-menu > div{
+    position: absolute;
+    top:50%;
+    border-radius:0px;
+}
+
+.nav-bar.open .ham-menu > div:nth-child(2){
+    transform:scaleX(4);
+    opacity: 0;
+}
+
+
+.nav-bar.open  .ham-menu > div:nth-child(1){
+    transform:rotate(45deg);
+}
+
+.nav-bar.open  .ham-menu > div:nth-child(3){
+    transform:rotate(-405deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.nav-bar.open .nav-drawer{
+    transform:rotate(0deg);
+}
+.nav-drawer{
+    --nav-drawer-width:50vw;
+    position: fixed;
+    top:var(--navBar-height);
+    right:0px;
+    max-height:calc(100% - var(--navBar-height));
+    width:var(--nav-drawer-width);
+    min-width: 260px;
+    max-width: 500px;
+    background: var(--color-secondary);
+    box-shadow:0px 0px 10px  var(--color-secondary);
+    transform-origin: 100% 0%;
+    transform:rotate(-90deg);
+    transition: 0.5s 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) all;
+    z-index: 9;
+}
+
+.nav-bar.open .nav-zip-slider{
+    /* this will be updated via js*/
+    /* right:50vw;   */
+    background:transparent;
+    border:8px double var(--text-primary);
+    transform:scale(1,1) translate(50%,-50%);
+    transition: 0.5s 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) all;
+}
+
+
+.nav-zip-slider{
+    top:var(--navBar-height);
+    position:fixed;
+    right:-25px;
+    transform:scale(5,0) translate(50%,-50%);
+    content:'';
+    width:0px;
+    height:0px;
+    background: var(--text-primary);
+    background:var(--color-primary-theme);
+    border:8px double var(--color-secondary-theme);
+    border-radius: 100%;
+    border:8px double var(--text-primary);
+    transition: 0.5s 0.0s cubic-bezier(0.895, 0.03, 0.685, 0.22) all;   
+    z-index: 10;
+}
+
+.drawer-item{
+    text-decoration: none;
+    color:var(--navbar-color);
+    position: relative;
+    background: var(--color-secondary);
+    padding:15px 50px;
+    text-align: center;
+    display: block;
+    transition-delay: 0s;
+}
+.drawer-item:hover{
+
+    background: linear-gradient(to top right,var(--color-primary-theme),var(--color-secondary-theme));
+}   
+
+.drawer-item:before{
+    content:'';
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) scaleX(4) ;
+    left:30px;
+    display: block;
+    width:0px;
+    height: 0px;
+    border:8px double var(--navbar-color);
+    transition: 0.3s 0.0s cubic-bezier(0.895, 0.03, 0.685, 0.22) all;
+    opacity:0;
+}
+.drawer-item.active{
+    border-left:6px solid var(--text-primary);
+    background: linear-gradient(to top right,var(--color-primary-theme),var(--color-secondary-theme));
+}
+.drawer-item.active:hover:before{
+    transform:translateY(-50%) rotate(0deg) scaleX(1) ;
+}
+.drawer-item.active:before{
+    transform:translateY(-50%) rotate(0deg) scaleX(1) ;
+    opacity:1;    
+}
+.drawer-item:hover:before{
+    transform:translateY(-50%) rotate(45deg) scaleX(1) ;
+    opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.theme-toggle{
+    cursor: pointer;
+}
+.theme-toggle.bi-moon-stars-fill{
+    animation: 0.3s linear pop-in;
+    /* transform: skew(50deg,60deg); */
+}
+
+.theme-toggle.bi-sun-fill{
+    animation: 0.3s linear fade-in;
+}
+
+
+@keyframes fade-in{
+      0%{ 
+          opacity:0;
+          transform:skew(50deg,60deg) rotate(0deg); 
+    }
+    100%{ 
+        opacity: 1; 
+        transform:skew(0deg,0deg) rotate(360deg);
+    }
+}
+
+
+@keyframes pop-in{
+    0%{ 
+        opacity:0; 
+        transform:skew(50deg,60deg) rotate(0deg);
+    }
+  100%{ 
+      opacity: 1; 
+      transform:skew(0deg,0deg) rotate(360deg);
+    }
+}

@@ -1,0 +1,28 @@
+:root{
+    /* for dark theme */
+        --color-primary:#212121; 
+        --color-secondary:#121212;
+        
+        --color-primary-theme:aqua;
+        --color-secondary-theme:indigo;
+
+        
+        --text-primary:#dedede;
+        --navbar-color:var(--text-primary);    
+        --text-link:var(--color-primary-theme);
+        
+        
+    /* for light theme */
+
+    
+    /* --color-primary:#dedede;
+    --color-secondary:#ededed; 
+    
+    --color-primary-theme:rgb(0, 119, 255);
+    --color-secondary-theme:rgb(255, 68, 93);
+    
+    --text-primary:#2b2b2b;
+    --text-link:var(--color-primary-theme);
+    --navbar-color:#2b2b2b;    
+     */
+}

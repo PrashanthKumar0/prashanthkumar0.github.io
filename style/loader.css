@@ -1,0 +1,128 @@
+#body-wrapper{
+    opacity:0;
+}
+#loader{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    z-index:50;
+    background:var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#loaderAnim{    
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+#loader.hide{
+    display: none;
+    animation:fade-away 0.3s linear;
+}
+
+#loaderAnim:before,
+#loaderAnim:after,
+#loaderAnim  div:before{
+    content:'';
+    display:block;
+    background:var(--text-primary);
+    position:absolute;
+    top:50%;
+    left:0px;    
+    transform:translate(-50%,-50%);
+    border-radius: 4px;
+    width:40px;
+    height:40px;
+}
+
+#loaderAnim:after{
+    left:-80px;
+}
+#loaderAnim  div:before{
+    left:80px;
+}
+
+
+
+#loaderAnim  div:after{
+    content: '';
+    display: block;
+    width:20px;
+    height:20px;
+    position:absolute;
+    border-radius:5px;
+    bottom:-20px;
+    left:-160px;
+    background: linear-gradient(to top right,var(--color-primary-theme),var(--color-secondary-theme)) ;
+    animation:2s infinite ease-in-out alternate slide-obs;
+}
+
+
+@keyframes slide-obs{
+    0%{
+        left:-160px;
+    }
+    100%{
+        left:160px;
+    }
+}
+
+
+
+
+
+
+#loaderAnim:before{
+    /* middle */
+    animation:1s linear jump infinite alternate;
+}
+#loaderAnim:after{
+    animation:2s linear jump1 infinite alternate;
+}
+#loaderAnim  div:before{
+    animation:2s linear jump1 infinite alternate-reverse;
+}
+
+@keyframes jump{
+    0%{
+        transform:translate(-50%,-50%);
+    }
+    80%{
+        transform:translate(-50%,-50%);
+    }
+    100%{
+        transform:translate(-50%,-200%);
+    }
+}
+@keyframes jump1{
+    0%{
+        transform:translate(-50%,-50%);
+    }
+    10%{
+        transform:translate(-50%,-50%);
+    }
+    35%{
+        transform:translate(-50%,-200%);
+    }
+    45%{
+        transform:translate(-50%,-50%);
+    }
+}
+
+
+@keyframes fade-away{
+    0%{
+        display:flex;
+        opacity:1;
+    }
+    100%{
+        display:flex;
+        opacity:0;
+    }
+}
