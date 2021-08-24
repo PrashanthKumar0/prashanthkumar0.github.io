@@ -1,8 +1,8 @@
 <?php
-if(!isset($_REQUEST['url']){
+/*if(!isset($_REQUEST['url']){
 $html="<p> usage : http://impk.herokuapp.com/cors?url=&lt;url to content&gt;";
 	die($html);
-}
+}*/
 header("Cross-Origin: *");
 $fileUrl=$_REQUEST['url'];
 $ch = curl_init($fileUrl);
