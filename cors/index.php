@@ -3,7 +3,10 @@
 $html="<p> usage : http://impk.herokuapp.com/cors?url=&lt;url to content&gt;";
 	die($html);
 }*/
+header("Origin: https://impk.herokuapp.com");
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+
 $fileUrl=$_REQUEST['url'];
 $ch = curl_init($fileUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
