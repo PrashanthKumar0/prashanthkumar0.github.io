@@ -15,8 +15,8 @@
 .avatar{
     margin:auto;
     margin-bottom:35px;
-    width:180px;
-    height:180px;
+    width:225px;
+    height:225px;
     /* border-radius:100%; */
     border:10px double var(--text-primary);
     border-radius:100% 100% 100% 10px;
